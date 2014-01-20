@@ -38,7 +38,7 @@
     <div class="slides">
       <section>
         <h1>INF 362 Unit 1</h1>
-        <h2>Collaboration</h2>
+        <h2>Debugging</h2>
       </section>
       <section>
         <h1>RAT</h1>
@@ -100,17 +100,181 @@
         <h1>Activities</h1>
       </section>
       <section>
-        <h1>For Next Class</h3>
-        <ol>
-          <li></li>
+        <h3>Rank the following CSS Selectors by specificity</h3>
+        <ol type="A">
+          <li>#foo .bar .qux</li>
+          <li>#foo div ul li p a</li>
+          <li>.bar #foo</li>
+          <li>#foo .bar p</li>
+          <li>#foo #baz </li>
         </ol>
       </section>
-    </div>
-  </div>
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.min.js"></script>
+      <section>
+        <h3>Applying the concepts behind CSS Specificity, what rules will apply to:</h3>
+        <ol type="A">
+          <li>&lt;p class="title" id="red"&gt;Hello, World!&lt;/p&gt;</li>
+          <li>#red .title {color: red; border: 1px solid green} </li>
+          <li>.title {color: green; font-size: 34px;}</li>
+          <li>p {color: black; font-size:20px; border: 1px solid orange;}</li>
+          <li>color: black; font-size: 34px; border: 1px solid orange;</li>
+          <li>color: red; font-size: 34px border: 1px solid green</li>
+          <li>color: green; font-size: 34px; border 1px solid green</li>
+          <li>color: green; font-size: 34px; border 1px solid orange</li>
+        </ol>
+      </section>
+      <section>
+        <h3>Given the following options, which is the best way to diagnose and resolve a problem with a CSS rule not applying to your code.</h3>
+        <ol type="A">
+          <li>Look at your CSS directly</li>
+          <li>Use Dev Tools style inspector</li>
+          <li>Add !important to the style that's not applying</li>
+          <li>Both A and C</li>
+        </ol>
+      </section>
+      <section>
+        <h3>A JavaScript function you just wrote is not working, where in dev tools would you want to look first?</h3>
+        <ol type="A">
+          <li>Network Panel</li>
+          <li>Element Inspector</li>
+          <li>Sources Panel</li>
+          <li>None of the Above</li>
+        </ol>
+      </section>
+      <section>
+        <h3>Place the following steps in order of effectiveness at solving a CSS problem</h3>
+        <ol type="A">
+          <li>Add a new class to the element in html, and new styles in CSS</li>
+          <li>Add an "element.style" style to the element in dev tools</li>
+          <li>Check for specificity/cascading issues in Dev Tools</li>
+          <li>Check to see if you wrote the CSS rule correctly</li>
+        </ol>
+      </section>
+      <section>
+        <h3>Place the following steps in order of effectiveness for diagnosing and resolving a JS function not firing.</h3>
+        <ol type="A">
+          <li>Check to see if you wrote the JS function correctly</li>
+          <li>Run the JS through a linter</li>
+          <li>Add console.log statements where appropriate to track script execution</li>
+          <li>Check the error output of the console</li>
+        </ol>
+      </section>TODO!
+      <section>
+        <h3>Jeff just diagnosed and solved a problem with a troubled piece of javascript. Given the sequence of his steps, could he have performed them in a better order than he did?</h3>
+        <ol type="A">
+          <li>Effect wasn't showing up on screen</li>
+          <li>Found a few missing semicolons, fixed them</li>
+          <li>Refreshed page, still had errors</li>
+          <li>Checked HTML, was clear of errors</li>
+          <li>Checked Chrome Dev Console, saw 2 errors</li>
+          <li>Fixed error in his initialization function (1st error)</li>
+          <li>Refreshed page, had another error</li>
+          <li>Fixed extra comma in a declaration (2nd error)</li>
+          <li>Refreshed page, everything worked.</li>
+        </ol>
+      </section>TODO!
+      <section>
+        <h3>Rearrange Jeff's diagnosis steps in the order you would have chosen and then decide as a team which steps you would have performed and in which order. (you CAN drop steps)</h3>
+        <ol type="A">
+          <li>X</li>
+        </ol>
+      </section>
+      <section>
+        <h3>Create a bug in CSS that can be debugged by dev tools</h3>
+        <p>Among the team, choose the best CSS bug, and explain why you thought it was the best example of a css rule to be diagnosed through dev tools.</p>
+      </section>
+      <section>
+        <h3>Create a JS bug that can be diagnosed by dev tools</h3>
+        <p>Among your team choose the best JS bug and explain why.</p>
+      </section>
+      <section>
+        <h3>Given the following code example: Individually: What is the expected output of this code</h3>
+        <pre><code>var theName = &quot;sara&quot;;
+          var namer = function(theName) {
+          document.write(theName)
+        }
+        namer();</code></pre>
+      </section>
+      <section>
+        <h3>As a team what is the output of this code</h3>
+        <pre><code>var theName = &quot;sara&quot;;
+          var namer = function(theName) {
+          document.write(theName)
+        }
+        namer();</code></pre>
+        <p class="fragment">undefined</p>
+      </section>
+      <section>
+        <h3>This script is not performing the task you think it should be. Choose the between lines where placing a console.log() would be most effective in checking to see if the function is firing at all.</h3>
+        <pre><code>var theName = &quot;sara&quot;;
+          var namer = function(theName) {
+          document.write(theName)
+        }
+        namer();</code></pre>
+        <ol type="A">
+          <li>1-2</li>
+          <li>2-3</li>
+          <li>3-4</li>
+          <li>4-5</li>
+          <li>5-6</li>
+        </ol>
+      </section>
+      <section>
+        <h3>What is the console.log function you should write to check to see what name is set to inside the function?</h3>
+        <pre><code>var theName = &quot;sara&quot;;
+          var namer = function(theName) {
+          document.write(theName)
+        }
+        namer();</code></pre>
+        <p class="fragment">console.log(theName);</p>
+      </section>
+      <section>
+        <h3>Sara's code isn't printing out her name. Which of the following mistakes in this code is the actual cause?</h3>
+        <pre><code>var theName = &quot;sara&quot;;
+          var namer = function(theName) {
+          document.write(theName)
+        }
+        namer();</code></pre>
+        <ol type="A">
+          <li>theName should be passed into the function</li>
+          <li>theName is not a global variable</li>
+          <li>document.write(theName) is missing a semi-colon</li>
+          <li>namer is not properly initialized as a function</li>
+        </ol>
+      </section>
+      <section>
+        <h3>I'm having a really tough time using Dev Tools. I'd like you to write up some instructions for me to do the following:</h3>
+      </section>
+      <section>
+        <ol>
+          <li>Start with this page: (<a href="http://jsbin.com/IdAFaJa/1/">http://jsbin.com/IdAFaJa/1/</a> )</li>
+          <li>Add your team name to the H1 tag</li>
+          <li>Apply your team color to your team name</li>
+          <li>Add an unordered list with your team member names after "members"</li>
+          <li>Create a custom css class for your team member names.</li>
+          <li>Apply that style to the list of names</li>
+          <li>Find an image on wikipedia commons (<a href="http://commons.wikimedia.org/">http://commons.wikimedia.org</a>) for your team mascot:</li>
+          <ol type="a">
+            <li>provide the search term used to find that image</li>
+            <li>Insert it between the text: "Team {Your Team Name}, Go &lt;img&gt;'s"</li>
+            <li>Image should be 300x300px</li>
+            <li>Image should have a border of 5px inset of your team color;</li>
+          </ol>
+        </ol>
+      </section>
 
-  <script>
+
+      <section>
+        <h1>For Next Class</h3>
+          <ol>
+            <li></li>
+          </ol>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
 
     // Full list of configuration options available here:
     // https://github.com/hakimel/reveal.js#configuration
@@ -124,14 +288,14 @@
       transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
         // Optional libraries used to extend on reveal.js
-      dependencies: [
+        dependencies: [
         { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
         { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
         { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
         { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-      ];
-    });
-  </script>
+        ]
+      });
+    </script>
 
-</body>
-</html>
+  </body>
+  </html>
