@@ -93,7 +93,9 @@
       <section>
         <h2>Some things to note</h2>
         <ul>
-          <li></li>
+          <li>Sign up for <a href="https://github.com/join">GitHub</a> ASAP</li>
+          <li>Add username to <a href="http://bit.ly/inf362teams">the Team spreadsheet: http://bit.ly/inf362teams</a></li>
+          <li><a href="http://specificity.keegan.st/">CSS Specificity checker</a></li>
         </ul>
       </section>
       <section>
@@ -110,16 +112,45 @@
         </ol>
       </section>
       <section>
-        <h3>Applying the concepts behind CSS Specificity, what rules will apply to:</h3>
+        <h3>What color is this text?</h3>
+        <pre><code>&lt;p class="title" id="red"&gt;Hello, World!&lt;/p&gt;</code></pre>
+        <pre><code>#red .title {color: red; border: 1px solid green}
+.title {color: green; font-size: 34px;}
+p {color: black; font-size:20px; border: 1px solid orange;}
+</code></pre>
         <ol type="A">
-          <li>&lt;p class="title" id="red"&gt;Hello, World!&lt;/p&gt;</li>
-          <li>#red .title {color: red; border: 1px solid green} </li>
-          <li>.title {color: green; font-size: 34px;}</li>
-          <li>p {color: black; font-size:20px; border: 1px solid orange;}</li>
-          <li>color: black; font-size: 34px; border: 1px solid orange;</li>
-          <li>color: red; font-size: 34px border: 1px solid green</li>
-          <li>color: green; font-size: 34px; border 1px solid green</li>
-          <li>color: green; font-size: 34px; border 1px solid orange</li>
+          <li>Black</li>
+          <li>Red</li>
+          <li>Green</li>
+          <li>Orange</li>
+        </ol>
+      </section>
+      <section>
+        <h3>What color is the border?</h3>
+        <pre><code>&lt;p class="title" id="red"&gt;Hello, World!&lt;/p&gt;</code></pre>
+        <pre><code>#red .title {color: red; border: 1px solid green}
+.title {color: green; font-size: 34px;}
+p {color: black; font-size:20px; border: 1px solid orange;}
+</code></pre>
+        <ol type="A">
+          <li>Black</li>
+          <li>Red</li>
+          <li>Green</li>
+          <li>Orange</li>
+        </ol>
+      </section>
+      <section>
+        <h3>What font size is this text?</h3>
+        <pre><code>&lt;p class="title" id="red"&gt;Hello, World!&lt;/p&gt;</code></pre>
+        <pre><code>#red.title {color: red; font-size:12px; border: 1px solid green}
+.title {color: green; font-size: 34px;}
+p {color: black; font-size:20px; border: 1px solid orange;}
+</code></pre>
+        <ol type="A">
+          <li>20px</li>
+          <li>34px</li>
+          <li>16px</li>
+          <li>None of the Above</li>
         </ol>
       </section>
       <section>
@@ -157,10 +188,11 @@
           <li>Add console.log statements where appropriate to track script execution</li>
           <li>Check the error output of the console</li>
         </ol>
-      </section>TODO!
+      </section>
       <section>
-        <h3>Jeff just diagnosed and solved a problem with a troubled piece of javascript. Given the sequence of his steps, could he have performed them in a better order than he did?</h3>
-        <ol type="A">
+        <h3>Jeff just diagnosed and solved a problem.</h3>
+        <p>Rearrange Jeff's diagnosis steps in the order you would have chosen and then decide as a team which steps you would have performed and in which order. (you CAN drop steps)</p>
+        <ol>
           <li>Effect wasn't showing up on screen</li>
           <li>Found a few missing semicolons, fixed them</li>
           <li>Refreshed page, still had errors</li>
@@ -171,11 +203,20 @@
           <li>Fixed extra comma in a declaration (2nd error)</li>
           <li>Refreshed page, everything worked.</li>
         </ol>
-      </section>TODO!
+      </section>
       <section>
-        <h3>Rearrange Jeff's diagnosis steps in the order you would have chosen and then decide as a team which steps you would have performed and in which order. (you CAN drop steps)</h3>
-        <ol type="A">
-          <li>X</li>
+        <h3>Back to Jeff.</h3>
+        <p>What is the biggest optimization you could have performed?</p>
+        <ol>
+          <li>Effect wasn't showing up on screen</li>
+          <li>Found a few missing semicolons, fixed them</li>
+          <li>Refreshed page, still had errors</li>
+          <li>Checked HTML, was clear of errors</li>
+          <li>Checked Chrome Dev Console, saw 2 errors</li>
+          <li>Fixed error in his initialization function (1st error)</li>
+          <li>Refreshed page, had another error</li>
+          <li>Fixed extra comma in a declaration (2nd error)</li>
+          <li>Refreshed page, everything worked.</li>
         </ol>
       </section>
       <section>
@@ -188,28 +229,28 @@
       </section>
       <section>
         <h3>Given the following code example: Individually: What is the expected output of this code</h3>
-        <pre><code>var theName = &quot;sara&quot;;
-          var namer = function(theName) {
-          document.write(theName)
-        }
-        namer();</code></pre>
+        <pre><code>var theName = "sara";
+var namer = function(theName) {
+  document.write(theName)
+}
+namer();</code></pre>
       </section>
       <section>
         <h3>As a team what is the output of this code</h3>
-        <pre><code>var theName = &quot;sara&quot;;
-          var namer = function(theName) {
-          document.write(theName)
-        }
-        namer();</code></pre>
+        <pre><code>var theName = "sara";
+var namer = function(theName) {
+  document.write(theName)
+}
+namer();</code></pre>
         <p class="fragment">undefined</p>
       </section>
       <section>
         <h3>This script is not performing the task you think it should be. Choose the between lines where placing a console.log() would be most effective in checking to see if the function is firing at all.</h3>
-        <pre><code>var theName = &quot;sara&quot;;
-          var namer = function(theName) {
-          document.write(theName)
-        }
-        namer();</code></pre>
+        <pre><code>var theName = "sara";
+var namer = function(theName) {
+  document.write(theName)
+}
+namer();</code></pre>
         <ol type="A">
           <li>1-2</li>
           <li>2-3</li>
@@ -220,16 +261,16 @@
       </section>
       <section>
         <h3>What is the console.log function you should write to check to see what name is set to inside the function?</h3>
-        <pre><code>var theName = &quot;sara&quot;;
-          var namer = function(theName) {
-          document.write(theName)
-        }
-        namer();</code></pre>
+        <pre><code>var theName = "sara";
+var namer = function(theName) {
+  document.write(theName)
+}
+namer();</code></pre>
         <p class="fragment">console.log(theName);</p>
       </section>
       <section>
         <h3>Sara's code isn't printing out her name. Which of the following mistakes in this code is the actual cause?</h3>
-        <pre><code>var theName = &quot;sara&quot;;
+        <pre><code>var theName = "sara";
           var namer = function(theName) {
           document.write(theName)
         }
@@ -261,20 +302,19 @@
           </ol>
         </ol>
       </section>
-
-
       <section>
-        <h1>For Next Class</h3>
-          <ol>
-            <li></li>
-          </ol>
-        </section>
-      </div>
+        <h1>For Next Class</h1>
+        <ol>
+          <li>Sign up for <a href="https://github.com/join">GitHub</a></li>
+          <li>Add username to <a href="http://bit.ly/inf362teams">the Team spreadsheet: http://bit.ly/inf362teams</a></li>
+        </ol>
+      </section>
     </div>
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
 
-    <script>
+  <script>
 
     // Full list of configuration options available here:
     // https://github.com/hakimel/reveal.js#configuration
